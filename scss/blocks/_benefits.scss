@@ -13,6 +13,13 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     @include mobile {
         flex-direction: column;
     }
@@ -34,6 +41,11 @@
     margin-left: auto;
     margin-right: auto;
     fill: #F16D7F;
+
+    @include tablet {
+        margin-top: 48px;
+        margin-bottom: 28px;
+    }
 
     @include mobile {
         margin-top: 48px;
@@ -58,6 +70,10 @@
     text-align: center;
     color: #FBFBFB;
     margin-bottom: 104px;
+
+    @include tablet {
+        margin-bottom: 48px;
+    }
 
     @include mobile {
         margin-bottom: 57px;
