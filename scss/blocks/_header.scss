@@ -1,5 +1,9 @@
 .header {
     background-color: $black;
+    
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .header__logo {
@@ -82,11 +86,16 @@
 }
 
 .header__link--basket::before{
-position: absolute;
-width: 19px;
-height: 19px;
-border-color: $pink-text;
-content: '5';
+    position: absolute;
+    background-color: #F1808F;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    content: '5'; 
+    color: white;
+    top: 10px;
+    right: -10px;
+    align-content: right;
 }
 
 .header__wrp {
@@ -126,4 +135,21 @@ content: '5';
     line-height: 17px;
     text-transform: uppercase;
     padding-top: 37px;
+}
+
+@media (max-width: $mobile-width) {
+    .header__link {
+     display: none;   
+    }
+
+    .header__link--basket {
+        display: none;
+    }
+
+    .header__menu {
+        right: 0;
+        z-index: 1;
+    }
+
+    
 }

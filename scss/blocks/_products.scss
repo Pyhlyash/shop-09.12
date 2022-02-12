@@ -32,6 +32,16 @@
     flex-grow: 1;
     margin-top: 30px;
     background-color: $milk-background;
+
+    @include tablet {
+        max-width: 48%;
+    }
+
+    @include mobile {
+        max-width: 100%;
+    }
+
+
 }
 
 .products__item-title {
@@ -102,7 +112,7 @@
     line-height: 17px;
     color: $white-text;
     padding: 12px;
-    
+
 }
 
 .products__item-button,
@@ -130,6 +140,10 @@
     padding: 14px 38px;
     color: $pink-text;
     margin-bottom: 95px;
+
+    @include tablet {
+        margin-bottom: 65px;
+    }
 }
 
 .products__button:hover,
